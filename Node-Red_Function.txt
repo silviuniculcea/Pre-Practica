@@ -1,0 +1,13 @@
+var payload = msg.payload;
+var temp = parseFloat(payload.temp);
+var umiditate = parseFloat(payload.umiditate);
+var message = {
+    topic: "training/device/Niculcea-Silviu_Andrei",
+    payload: {
+        temp: temp,
+        umiditate: umiditate
+    },
+    qos: 0,
+    retain: false
+};
+return msg;
